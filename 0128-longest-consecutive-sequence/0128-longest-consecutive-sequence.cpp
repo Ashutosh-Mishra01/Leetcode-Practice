@@ -9,7 +9,9 @@ public:
         for(int z:nums){
             if(!checked[z] and !present[z-1]){
                 int currlen=0;
-                while(present[z++]){
+                while(present[z]){
+                    checked[z]=true;
+                    z++;
                     currlen++;
                 }
                 maxlen=max(currlen,maxlen);
@@ -33,6 +35,12 @@ public:
         // }
         // return maxlen;
         
+        
+        // unordered_map<int,bool> present;
+        // for(int x:nums){
+        //     present[x]=true;
+        // }
+        // int maxlen=0;
         // for(auto x:present){
         //     if(!present[x.first-1]){
         //         int currlen=0;
