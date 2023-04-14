@@ -14,9 +14,9 @@ public:
                 if(mp.find(s)!=mp.end()){
                     cnt+=(4*min(mp[words[i]],mp[s]));
                     mp.erase(words[i]);
-                    
+                    // mp.erase(s);
                 }
-                mp.erase(s);
+                
             }
             else if(words[i][0]==words[i][1]){
                 if(mp[words[i]]%2==0){
